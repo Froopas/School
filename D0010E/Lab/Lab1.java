@@ -52,8 +52,9 @@ public class Lab1 {
 	//l(x)=l(f(x))+1
 	public static void main(String[] args) {
 		for(int i=0;i<args.length;i++) {
-			System.out.print(f1(Integer.parseInt(args[i])));/*Task 1*/
-			System.out.print("java lifelength for "+args[i]+"\n"+
+			System.out.println("Current variable = "+args[i]);
+			System.out.println(f1(Integer.parseInt(args[i])));/*Task 1*/
+			System.out.println("java lifelength for "+args[i]+"\n"+
 							"f1="+f1(Integer.parseInt(args[i]))+"\t"+
 							"f2="+f2(Integer.parseInt(args[i]))+"\t"+
 							"f4="+f4(Integer.parseInt(args[i]))+"\t"+
@@ -61,8 +62,8 @@ public class Lab1 {
 							"f16="+f16(Integer.parseInt(args[i]))+"\t"+
 							"f32="+f32(Integer.parseInt(args[i]))+"\t"
 			  );/*Task 2*/
-			System.out.print(iterateF(Integer.parseInt(args[i]),4)); /*Task 3*/
-			System.out.print(iterLifelength(Integer.parseInt(args[i])));/*Task 4*/
+			System.out.println(iterateF(Integer.parseInt(args[i]),4)); /*Task 3*/
+			System.out.println(iterLifelength(Integer.parseInt(args[i])));/*Task 4*/
 		}
 		System.out.println("Iter\trec");
 		for(int i=1;i<16;i++) {
