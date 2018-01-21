@@ -1,4 +1,5 @@
 package BonusUppgifter;
+// Anton Johansson TCDAA D0010E
 
 public class Temp {
 	
@@ -9,7 +10,7 @@ public class Temp {
 	public static void main(String[] args) {
 		for (int i=40;i>=-40;i-=5) {
 			double x=java.lang.Math.rint(f2c(i)*10.0d)/10.0d;
-			System.out.println(i+"\u00B0f is "+x+"\u00B0c");
+			System.out.println(i+"\u00B0F is "+x+"\u00B0C");
 		}
 	}
 
