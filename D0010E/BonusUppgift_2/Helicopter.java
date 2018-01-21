@@ -1,4 +1,4 @@
-package BonusUppgifter;
+package BonusUppgift_2;
 
 public class Helicopter {
 	private String callSign = "";

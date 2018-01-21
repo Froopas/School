@@ -1,4 +1,5 @@
-package BonusUppgifter;
+package BonusUppgift_2;
+
 /** Anton Johansson TCDAA D0010E
  * 
  * */
