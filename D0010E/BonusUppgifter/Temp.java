@@ -1,5 +1,6 @@
 package BonusUppgifter;
-// Anton Johansson TCDAA D0010E V2
+/** Anton Johansson TCDAA D0010E V2
+ */
 
 public class Temp {
 	
