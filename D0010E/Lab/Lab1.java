@@ -49,7 +49,8 @@ public class Lab1 {
 			return 1+recLifelength(3*a0+1);
 		}
 	}
-	//l(x)=l(f(x))+1
+	//l(x)=l(f(x))+1;
+	//l(1)=0;
 	public static void tryTask1_6(String[] args) {
 		for(int i=0;i<args.length;i++) {
 			System.out.println("Current variable = "+args[i]);
@@ -73,24 +74,21 @@ public class Lab1 {
 				"f32="+f32(Integer.parseInt(argument))+"\t";
 	}
 	public static int Task3(String argument) {
-		return iterateF(Integer.parseInt(argument),4);
+		return iterateF(Integer.parseInt(argument),3);
 	}
 	public static int Task4(String argument) {
 		return iterLifelength(Integer.parseInt(argument));
 	}
 	public static String Task6() {
-		String outputs="Iter\trec\n";
-		for (int i=0;i<16;i++) {
-			outputs+=iterLifelength(i)+"\t"+recLifelength(i)+"\n";
+		String outputs="\t\t\tIter\trec\n";
+		for (int i=1;i<16;i++) {
+			outputs+="The life length of "+i+" is "+iterLifelength(i)+"\t"+recLifelength(i)+"\n";
 		}
 		return outputs;
 	}
 	public static void main(String[] args) {
-		int n=5;
-		String b="";
-		do {
-			//n=System.in.read(b,0,1000);
-			switch(n) {
+		int n=16;
+		switch(n) {
 			case(1):{
 				System.out.println("Using variable "+args[1]+"\n"+Task1(args[1]));
 				break;
@@ -108,7 +106,7 @@ public class Lab1 {
 				break;
 			}
 			case(6):{
-				Task6();
+				System.out.print(Task6());
 				break;
 			}
 			case(16):{
@@ -116,11 +114,17 @@ public class Lab1 {
 				break;
 			}
 			default:{
+				System.out.println("The value of n is not valid");
 				break;
 			}
-			}
-		}while(n!=0);
+		}
 		
 	}
 
 }
+/* Notes:
+ * The if there is such a number so that the start value has an infinite length the
+ * program in the case of finding lifelength will continue "forever", in the iterative
+ * function the computer will go as long as possible, in the recursive function the 
+ * computer will need to much memory and get a stack overflow.
+ * */
