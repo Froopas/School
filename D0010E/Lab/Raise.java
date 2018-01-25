@@ -23,9 +23,9 @@ public class Raise {
 
 	public static void main(String[] args) {
 		double x=1.0001;
-		for(int i=1;i<=75000;i*=2) {
-			//System.out.println("Result One : "+recRaiseOne(x,i,0));
-			System.out.println("Result Half: "+recRaiseHalf(x,i,0)+"\n");
+		for(int i=1;i<=8000;i+=1) {
+			System.out.println("Result One : "+recRaiseOne(x,i,0));
+			System.out.println("Result of Half when k = "+i+" : "+recRaiseHalf(x,i,0)+"\n");
 		}
 	}
 }

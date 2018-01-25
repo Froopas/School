@@ -2,7 +2,7 @@ package Lab;
 
 public class Lab1 {
 	public static int f1(int a0) {
-		if(a0==1) {
+		if(a0<=1) {
 			return 1;
 		}
 		if(a0%2==0) {
@@ -72,7 +72,10 @@ public class Lab1 {
 				"f32="+f32(Integer.parseInt(argument))+"\t";
 	}
 	public static int Task3(String argument) {
-		return iterateF(Integer.parseInt(argument),3);
+		System.out.println(iterateF(3,5));
+		System.out.println(iterateF(42,5));
+		System.out.println(iterateF(1,3));
+		return 0;
 	}
 	public static int Task4(String argument) {
 		return iterLifelength(Integer.parseInt(argument));
@@ -85,7 +88,7 @@ public class Lab1 {
 		return outputs;
 	}
 	public static void main(String[] args) {
-		int n=16;
+		int n=6;
 		switch(n) {
 			case(1):{
 				System.out.println("Using variable "+args[1]+"\n"+Task1(args[1]));
