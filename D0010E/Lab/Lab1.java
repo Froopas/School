@@ -43,10 +43,8 @@ public class Lab1 {
 	public static int recLifelength(int a0) {
 		if (a0<=1) {
 			return 0;
-		} else if(a0%2==0) {
-			return 1+recLifelength(a0/2);
 		} else {
-			return 1+recLifelength(3*a0+1);
+			return 1+recLifelength(f1(a0));
 		}
 	}
 	//l(x)=l(f(x))+1;
