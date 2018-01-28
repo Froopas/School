@@ -2,7 +2,7 @@ package Lab;
 
 public class Lab1 {
 	public static int f1(int a0) {
-		if(a0==1) {
+		if(a0<=1) {
 			return 1;
 		}
 		if(a0%2==0) {
@@ -43,13 +43,12 @@ public class Lab1 {
 	public static int recLifelength(int a0) {
 		if (a0<=1) {
 			return 0;
-		} else if(a0%2==0) {
-			return 1+recLifelength(a0/2);
 		} else {
-			return 1+recLifelength(3*a0+1);
+			return 1+recLifelength(f1(a0));
 		}
 	}
-	//l(x)=l(f(x))+1
+	//l(x)=l(f(x))+1;
+	//l(1)=0;
 	public static void tryTask1_6(String[] args) {
 		for(int i=0;i<args.length;i++) {
 			System.out.println("Current variable = "+args[i]);
@@ -73,15 +72,18 @@ public class Lab1 {
 				"f32="+f32(Integer.parseInt(argument))+"\t";
 	}
 	public static int Task3(String argument) {
-		return iterateF(Integer.parseInt(argument),4);
+		System.out.println(iterateF(3,5));
+		System.out.println(iterateF(42,5));
+		System.out.println(iterateF(1,3));
+		return 0;
 	}
 	public static int Task4(String argument) {
 		return iterLifelength(Integer.parseInt(argument));
 	}
 	public static String Task6() {
-		String outputs="Iter\trec\n";
+		String outputs="\t\t\tIter\trec\n";
 		for (int i=1;i<16;i++) {
-			outputs+=iterLifelength(i)+"\t"+recLifelength(i)+"\n";
+			outputs+="The life length of "+i+" is "+iterLifelength(i)+"\t"+recLifelength(i)+"\n";
 		}
 		return outputs;
 	}
