@@ -29,6 +29,7 @@ public class ArraySize {
 			}
 		} catch (IndexOutOfBoundsException e) {
 			return count;
+			
 		}
 		return 0;
 	}

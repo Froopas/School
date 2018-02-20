@@ -46,7 +46,7 @@ public class ImageViewer extends JFrame {
 	}
 
 	public static void main(String[] args) {
-		ImageViewer hej=new ImageViewer();
+		new ImageViewer();
 
 	}
 
